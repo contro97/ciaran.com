@@ -56,38 +56,57 @@ section{
 .section{
     transform: translateY(-100%);
     transition: var(--transition-y-axis);
-    background-color: var(--color-primary);
+    
 }
 
 .sec1{
     display: none;
     transform: translateY(0) scale(1);
+    
 }
 
 .sec2{
     display: none;
     transform: translateY(0) scale(1);
+    
 }
 
 .sec3{
     display: none;
     transform: translateY(0) scale(1);
+    
 }
 
 
 .sec4{
     display: none;
     transform: translateY(0) scale(1);
+    
 }
 
 .sec5{
     display: none;
     transform: translateY(0) scale(1);
+    
 }
 
 .sec6{
     display: none;
     transform: translateY(0) scale(1);
+    
+}
+
+.active{
+    display: block;
+    animation: scaleAnim 1s ease-in-out;
+    @keyframes scaleAnim{
+        0%{
+            transform: translateY(-100%) scaleY(0)
+        }
+        100%{
+            transform: translateY(0) scaleY(1)
+        }
+    }
 }
 
 //Controllers
@@ -126,5 +145,26 @@ section{
             color: var(--color-grey-2);
             pointer-events: none;
         }
+    }
+}
+
+/*Header-Content*/
+
+.header-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height:100%;
+    
+    .left-header{
+        display: flex;
+        align-items: center;
+        position: relative;
+        .h-shape{
+            transition:all .4s ease-in-out;
+            width: 65%;
+            height: 100%;
+            background-color: var(--color-secondary);
+        }
+        
     }
 }
